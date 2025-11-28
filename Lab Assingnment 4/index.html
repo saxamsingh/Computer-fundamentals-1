@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saksham Singh — My beginner portfolio</title>
+  <style>
+    /* Basic beginner-friendly CSS — I wrote this like I'm learning */
+    :root{
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #2563eb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg, var(--bg), #eef2ff);
+      color:#111827;
+      line-height:1.5;
+    }
+    .container{
+      max-width:1000px;
+      margin:30px auto;
+      padding:20px;
+    }
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .avatar{
+      width:84px;height:84px;border-radius:12px;overflow:hidden;
+      border:2px solid rgba(0,0,0,0.06);
+      flex:0 0 84px;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{font-size:1.6rem;margin:0}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    /* simple nav */
+    nav{
+      display:flex;gap:10px;margin-top:12px;
+    }
+    nav a{
+      text-decoration:none;padding:8px 10px;border-radius:8px;font-size:0.9rem;color:var(--accent);
+      border:1px solid rgba(37,99,235,0.15);
+    }
+
+    /* two column layout */
+    .grid{display:flex;gap:20px;flex-wrap:wrap}
+    .main{flex:1 1 640px}
+    .side{width:280px;flex:0 0 280px}
+
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+    section + section{margin-top:16px}
+
+    /* projects list */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, #ffffff, #fbfdff);border:1px solid rgba(0,0,0,0.03)}
+    .project h3{margin:0 0 6px;font-size:1rem}
+    .project p{margin:0;color:var(--muted);font-size:0.9rem}
+
+    /* skills */
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#eef2ff;padding:6px 8px;border-radius:999px;font-size:0.85rem}
+
+    /* contact */
+    .contact a{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;text-decoration:none;background:var(--accent);color:white}
+
+    footer{color:var(--muted);font-size:0.9rem;margin-top:24px;text-align:center}
+
+    /* simple responsiveness */
+    @media (max-width:880px){
+      .side{width:100%;flex-basis:100%}
+      .projects{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <header>
+      <div>
+        <h1>Hi — I'm Saksham Singh</h1>
+        <p class="lead">A beginner web dev learning HTML & CSS. I make small projects and try to learn everyday.</p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="main">
+        <section id="about" class="card">
+          <h2>About me</h2>
+          <p>Hello! I'm Saksham — currently studying and building small websites. I like clean simple design and learning new things. This portfolio is made only with <strong>HTML</strong> and <strong>CSS</strong> because I wanted to practice fundamentals.</p>
+          <p>Why a simple portfolio? Because I want things to be easy to update and fast to load. Also, starting small helps me focus on design and structure.</p>
+        </section>
+
+        <section id="projects" class="card">
+          <h2>Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <h3>My Todo App (HTML only)</h3>
+              <p>A simple todo list made with only HTML and CSS tricks — not fully interactive but shows layout and ideas.</p>
+            </article>
+
+            <article class="project">
+              <h3>School Website Clone</h3>
+              <p>I recreated a school's homepage layout to practice grids, headers, and navigation.</p>
+            </article>
+
+            <article class="project">
+              <h3>Resume Page</h3>
+              <p>A single-page resume with sections for education, skills and contact. I styled it using only CSS.</p>
+            </article>
+
+            <article class="project">
+              <h3>Mini Gallery</h3>
+              <p>A small responsive gallery where images rearrange themselves on small screens.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>What I'm learning</h2>
+          <ul>
+            <li>Responsive layouts with flexbox and grid</li>
+            <li>Accessible HTML (semantic tags, alt text)</li>
+            <li>CSS transitions and hover effects</li>
+            <li>Basic JavaScript next (but not yet)</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <aside class="side">
+        <section class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Flexbox</span>
+            <span class="skill">Grid</span>
+            <span class="skill">Responsive design</span>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h2>Contact</h2>
+          <p class="contact">I like to talk about projects, internships or just learn together. You can email me.</p>
+          <a href="mailto:Saksham.example@mail.com">Saksham8728372@gmail.com</a>
+          <p style="margin-top:8px;color:var(--muted);font-size:0.85rem">Or link to <a href="#projects">my projects</a> above.</p>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h2>Notes</h2>
+          <p style="color:var(--muted);font-size:0.9rem">This file is intentionally simple. If you want, I can help:
+            <ul>
+              <li>turn it into a downloadable .zip</li>
+              <li>add a real photo and links</li>
+              <li>convert it to a multi-page site</li>
+            </ul>
+          </p>
+        </section>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
